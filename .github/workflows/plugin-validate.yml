@@ -1,0 +1,23 @@
+# GitHub Actions: validate the plugin registry on PR / push (runs on the GitHub mirror).
+# Gitee has no free CI (Gitee Go is paid), so the authoritative check is the
+# maintainer's local `npm run validate` before merging. This workflow runs the
+# same check for free on the GitHub mirror repository.
+name: plugin-validate
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install deps
+        run: npm install --no-audit --no-fund
+      - name: Validate plugin registry
+        run: node scripts/validate.mjs
