@@ -1,0 +1,24 @@
+# Gitee Go pipeline: validate the Plugin registry on every PR.
+# NOTE: confirm the exact workflow directory/keys against current Gitee Go docs
+# (this mirrors a GitHub-Actions-like schema). If Gitee Go is unavailable,
+# fall back to the manual pre-commit command documented in README.md:
+#   npm install && npm run validate
+name: plugin-validate
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install deps
+        run: npm install --no-audit --no-fund
+      - name: Validate plugin registry
+        run: node scripts/validate.mjs

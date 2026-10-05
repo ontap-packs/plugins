@@ -1,0 +1,148 @@
+{
+  "schema": 1,
+  "updatedAt": "2026-10-05T12:22:14.304Z",
+  "plugins": [
+    {
+      "id": "json-tools",
+      "name": "JSON 工具",
+      "author": "ontap",
+      "license": "MIT",
+      "versionCode": 1000000,
+      "version": "1.0.0",
+      "description": "格式化 / 压缩 / 校验 JSON",
+      "tags": [
+        "json",
+        "dev",
+        "offline"
+      ],
+      "categories": [
+        "developer"
+      ],
+      "download": "plugins/json-tools/json-tools.otplugin",
+      "sha256": "de52d88971148328dd2163561d4afc7e388969bec4e35a1cdaf5a8fb54f7d400",
+      "homepage": "https://gitee.com/ontap-app/plugins",
+      "minAppVersion": "0.1.48",
+      "runtime": "python",
+      "entry": "main.py",
+      "capabilities": [],
+      "requiresAi": false,
+      "deprecated": false,
+      "revoked": false,
+      "authorVerified": false
+    },
+    {
+      "id": "text-tools",
+      "name": "文本工具箱",
+      "author": "ontap",
+      "license": "MIT",
+      "versionCode": 1000000,
+      "version": "1.0.0",
+      "description": "文本转换：大小写 / trim / 去重 / 排序 / 反转行序",
+      "tags": [
+        "text",
+        "dev",
+        "offline"
+      ],
+      "categories": [
+        "developer"
+      ],
+      "download": "plugins/text-tools/text-tools.otplugin",
+      "sha256": "c099fee384748bcb7cb4a34a35cb4627f3eadd3af0b83e2d32e4fbf39c4fc126",
+      "homepage": "https://gitee.com/ontap-app/plugins",
+      "minAppVersion": "0.1.48",
+      "runtime": "python",
+      "entry": "main.py",
+      "capabilities": [],
+      "requiresAi": false,
+      "deprecated": false,
+      "revoked": false,
+      "authorVerified": false
+    },
+    {
+      "id": "encode-tools",
+      "name": "编解码工具",
+      "author": "ontap",
+      "license": "MIT",
+      "versionCode": 1000000,
+      "version": "1.0.0",
+      "description": "Base64 / URL / 十六进制编解码",
+      "tags": [
+        "encode",
+        "dev",
+        "offline"
+      ],
+      "categories": [
+        "developer"
+      ],
+      "download": "plugins/encode-tools/encode-tools.otplugin",
+      "sha256": "21884a73fabaa93a48bba7ee3de067f09e73cca7968b9f53e9ef26ca31cc5dd7",
+      "homepage": "https://gitee.com/ontap-app/plugins",
+      "minAppVersion": "0.1.48",
+      "runtime": "python",
+      "entry": "main.py",
+      "capabilities": [],
+      "requiresAi": false,
+      "deprecated": false,
+      "revoked": false,
+      "authorVerified": false
+    },
+    {
+      "id": "html-card",
+      "name": "内容卡片预览",
+      "author": "ontap",
+      "license": "MIT",
+      "versionCode": 1000000,
+      "version": "1.0.0",
+      "description": "把内容渲染为 HTML 卡片并在预览窗口展示",
+      "tags": [
+        "preview",
+        "html",
+        "offline"
+      ],
+      "categories": [
+        "developer"
+      ],
+      "download": "plugins/html-card/html-card.otplugin",
+      "sha256": "f17888a15b83e3a7a35043f3d1c79b4b2ca91a3703835ecee0ec4988f90f4bea",
+      "homepage": "https://gitee.com/ontap-app/plugins",
+      "minAppVersion": "0.1.48",
+      "runtime": "python",
+      "entry": "main.py",
+      "capabilities": [],
+      "requiresAi": false,
+      "deprecated": false,
+      "revoked": false,
+      "authorVerified": false
+    },
+    {
+      "id": "file-writer",
+      "name": "写出文件",
+      "author": "ontap",
+      "license": "MIT",
+      "versionCode": 1000000,
+      "version": "1.0.0",
+      "description": "把内容写出为文件（写盘前确认）",
+      "tags": [
+        "file",
+        "dev",
+        "offline"
+      ],
+      "categories": [
+        "developer"
+      ],
+      "download": "plugins/file-writer/file-writer.otplugin",
+      "sha256": "c62a45d40218f2c6fe0326dab60c099735b45aa34ec54e736e7422bd7ed02434",
+      "homepage": "https://gitee.com/ontap-app/plugins",
+      "minAppVersion": "0.1.48",
+      "runtime": "python",
+      "entry": "main.py",
+      "capabilities": [
+        "file.write"
+      ],
+      "requiresAi": false,
+      "deprecated": false,
+      "revoked": false,
+      "authorVerified": false
+    }
+  ]
+}

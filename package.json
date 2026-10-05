@@ -1,0 +1,13 @@
+{
+  "name": "ontap-plugins-registry",
+  "private": true,
+  "type": "module",
+  "description": "Validation & index generation tooling for the OnTap official curated Plugin registry.",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "generate-index": "node scripts/generate-index.mjs"
+  },
+  "devDependencies": {
+    "fflate": "^0.8.2"
+  }
+}
