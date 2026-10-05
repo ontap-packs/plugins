@@ -26,15 +26,17 @@
 
 发现严重安全问题时，维护者会在 `index.json` 对应条目设 `revoked: true` 并填 `securityNotice`，客户端下次拉取后停用已安装实例。
 
-## 校验（CI）
+## 校验
 
-本仓库自带校验工具，PR 会运行 `.workflow/plugin-validate.yml`。本地可先跑：
+本仓库自带校验工具。Gitee 无免费 CI（Gitee Go 为付费功能），因此**合并前由维护者在本地运行**：
 
 ```bash
 npm install
 npm run validate         # 校验 index.json <-> plugins/ + sha256 + manifest + 危险模式扫描
 npm run generate-index    # 需要时从 .otplugin 重建 index.json（保留治理字段）
 ```
+
+> 可选：若本仓库镜像到 GitHub，`.github/workflows/plugin-validate.yml` 会在 GitHub 上自动运行同一校验（免费）。
 
 `validate` 检查：
 

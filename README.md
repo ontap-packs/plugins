@@ -69,6 +69,17 @@ OnTap 官方精选插件目录（Phase 0）。OnTap 客户端通过本仓库的 
 - 插件是**非可信代码**：OnTap 无沙箱，安装后默认禁用，启用前展示能力清单与静态扫描警告。
 - 发现问题可在 Issue 中报告；维护者可对条目设 `revoked: true` 紧急下架（客户端会停用已安装实例）。
 
+## 校验
+
+本仓库自带校验工具（Gitee 无免费 CI，合并前本地运行）：
+
+```bash
+npm install
+npm run validate
+```
+
+> 若本仓库镜像到 GitHub，`.github/workflows/plugin-validate.yml` 会免费自动运行同一校验。详见 [CONTRIBUTING.md](./CONTRIBUTING.md)。
+
 ## 许可证
 
 本仓库采用 [MIT 许可证](./LICENSE)。各插件的具体授权以 `index.json` 条目的 `license` 字段为准。

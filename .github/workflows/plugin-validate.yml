@@ -1,14 +1,13 @@
-# Gitee Go pipeline: validate the Plugin registry on every PR.
-# NOTE: confirm the exact workflow directory/keys against current Gitee Go docs
-# (this mirrors a GitHub-Actions-like schema). If Gitee Go is unavailable,
-# fall back to the manual pre-commit command documented in README.md:
-#   npm install && npm run validate
+# GitHub Actions: validate the plugin registry on PR / push (runs on the GitHub mirror).
+# Gitee has no free CI (Gitee Go is paid), so the authoritative check is the
+# maintainer's local `npm run validate` before merging. This workflow runs the
+# same check for free on the GitHub mirror repository.
 name: plugin-validate
 
 on:
   pull_request:
-    branches:
-      - master
+  push:
+    branches: [master]
 
 jobs:
   validate:
